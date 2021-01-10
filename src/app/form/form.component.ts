@@ -33,7 +33,10 @@ export class FormComponent implements OnInit {
  const phone = this.firstReactiveForm.get('phone').value;
  const email = this.firstReactiveForm.get('email').value;
 
- this.router.navigate(['/userInfo' , address, phone, email]);
+ if(address&&phone&&email){
+
+  this.router.navigate(['/userInfo' , address, phone, email]);
+ }
   }
 
 }
